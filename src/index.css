@@ -3,8 +3,10 @@
 @theme {
   --font-sans: "Nunito", ui-sans-serif, system-ui, sans-serif;
   --font-script: "Caveat", cursive;
+  --font-serif: "Fraunces", serif;
 
   --font-family-script: var(--font-script);
+  --font-family-serif: var(--font-serif);
 
   --color-teal: #0f8b8d;
   --color-teal-dark: #0a6b6d;
@@ -16,6 +18,15 @@
   --color-beige-dark: #f0ebe3;
   --color-grey-soft: #6b7280;
   --color-grey-light: #e8e4df;
+
+  /* Landing page (Sprint 2) — additive tokens, existing palette above is unchanged */
+  --color-navy: #1a1a2e;
+  --color-navy-dark: #0d0d20;
+  --color-panel-teal-start: #007b8a;
+  --color-panel-teal-end: #003d46;
+  --color-panel-orange-start: #e87b3e;
+  --color-panel-orange-end: #8b3a12;
+  --color-about-overlay: #00505c;
 }
 
 html {
@@ -29,6 +40,10 @@ body {
 
 .font-script {
   font-family: var(--font-script);
+}
+
+.font-serif {
+  font-family: var(--font-serif);
 }
 
 :focus-visible {

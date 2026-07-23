@@ -1,13 +1,7 @@
+import { useState, type FormEvent } from "react";
 import { Link } from "react-router-dom";
 import Logo from "./Logo";
-import { contact, footerTrustItems, legalLinks, navLinks } from "../data/content";
-import { CheckIcon } from "./icons";
-
-const footerNavLinks = [
-  { label: "Impressum", href: "/impressum" },
-  { label: "Datenschutz", href: "/datenschutz" },
-  { label: "Kontakt", href: "/kontakt" },
-];
+import { contact, footerServices, footerTagline, legalLinks, newsletter, zvrNumber } from "../content/site";
 
 function SocialIcon({ type }: { type: "facebook" | "instagram" }) {
   if (type === "facebook") {
@@ -24,40 +18,70 @@ function SocialIcon({ type }: { type: "facebook" | "instagram" }) {
   );
 }
 
+function NewsletterForm() {
+  const [email, setEmail] = useState("");
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = (event: FormEvent) => {
+    event.preventDefault();
+    // Placeholder signup — no backend integration yet (Sprint 3: Mailchimp/Brevo).
+    setSubmitted(true);
+    setEmail("");
+  };
+
+  if (submitted) {
+    return (
+      <p className="rounded-xl bg-white/10 p-4 text-sm text-white/90" role="status">
+        {newsletter.confirmation}
+      </p>
+    );
+  }
+
+  return (
+    <form onSubmit={handleSubmit} className="space-y-3">
+      <label htmlFor="footer-newsletter-email" className="sr-only">
+        E-Mail-Adresse
+      </label>
+      <input
+        id="footer-newsletter-email"
+        type="email"
+        required
+        value={email}
+        onChange={(event) => setEmail(event.target.value)}
+        placeholder={newsletter.placeholder}
+        className="w-full rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-base text-white placeholder:text-white/50 focus:border-white/50 focus:outline-none"
+      />
+      <button
+        type="submit"
+        className="w-full rounded-xl bg-orange px-4 py-3 text-base font-bold text-white transition-colors hover:bg-orange-dark"
+      >
+        {newsletter.buttonLabel}
+      </button>
+    </form>
+  );
+}
+
 export default function Footer() {
   return (
-    <footer className="border-t border-grey-light bg-white">
-      <div className="bg-orange py-4">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-4 px-4 text-center sm:flex-row sm:flex-wrap sm:gap-8 lg:px-8">
-          {footerTrustItems.map((text) => (
-            <p key={text} className="flex items-center gap-2 text-base font-bold text-white sm:text-lg">
-              <CheckIcon className="h-5 w-5 shrink-0" />
-              {text}
-            </p>
-          ))}
-        </div>
-      </div>
-
+    <footer className="bg-navy text-white">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
-          <div className="sm:col-span-2 lg:col-span-1">
+          <div>
             <Link to="/">
               <Logo />
             </Link>
-            <p className="mt-4 max-w-xs text-base leading-relaxed text-gray-700">
-              Alltagshilfe und Begleitung für Senioren in Wien – persönlich, verlässlich und mit Herz.
-            </p>
+            <p className="mt-4 max-w-xs text-base leading-relaxed text-white/70">{footerTagline}</p>
             <div className="mt-6 flex gap-3">
               <a
                 href="#"
-                className="flex h-12 w-12 items-center justify-center rounded-full bg-teal-light text-teal transition-colors hover:bg-teal hover:text-white"
+                className="flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20"
                 aria-label="Facebook"
               >
                 <SocialIcon type="facebook" />
               </a>
               <a
                 href="#"
-                className="flex h-12 w-12 items-center justify-center rounded-full bg-teal-light text-teal transition-colors hover:bg-teal hover:text-white"
+                className="flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20"
                 aria-label="Instagram"
               >
                 <SocialIcon type="instagram" />
@@ -66,24 +90,11 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-lg font-bold text-teal">Schnellzugriff</h3>
+            <h3 className="text-lg font-bold text-white">Angebote</h3>
             <ul className="mt-4 space-y-3">
-              {navLinks.map((link) => (
-                <li key={link.href}>
-                  <Link to={link.href} className="text-base font-semibold text-gray-700 hover:text-teal">
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-lg font-bold text-teal">Rechtliches</h3>
-            <ul className="mt-4 space-y-3">
-              {legalLinks.map((link) => (
+              {footerServices.map((link) => (
                 <li key={link.label}>
-                  <Link to={link.href} className="text-base font-semibold text-gray-700 hover:text-teal">
+                  <Link to={link.href} className="text-base font-semibold text-white/70 hover:text-white">
                     {link.label}
                   </Link>
                 </li>
@@ -92,36 +103,48 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-lg font-bold text-teal">Kontakt</h3>
-            <ul className="mt-4 space-y-3 text-base font-semibold text-gray-700">
+            <h3 className="text-lg font-bold text-white">Kontakt & Öffnungszeiten</h3>
+            <ul className="mt-4 space-y-3 text-base font-semibold text-white/70">
               <li>
-                <a href={contact.phoneHref} className="hover:text-teal">
+                <a href={contact.phoneHref} className="hover:text-white">
                   {contact.phoneDisplay}
                 </a>
               </li>
               <li>
-                <a href={contact.emailHref} className="break-all hover:text-teal">
+                <a href={contact.emailHref} className="break-all hover:text-white">
                   {contact.email}
                 </a>
               </li>
               <li>{contact.address}</li>
               <li>{contact.city}</li>
+              <li className="text-white/50">{contact.hours}</li>
             </ul>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-bold text-white">Newsletter</h3>
+            <p className="mt-4 text-base text-white/70">{newsletter.label}</p>
+            <div className="mt-4">
+              <NewsletterForm />
+            </div>
           </div>
         </div>
 
-        <div className="mt-12 border-t border-grey-light pt-8 text-center">
-          <div className="flex flex-wrap items-center justify-center gap-4 text-sm font-semibold text-gray-600 sm:gap-6">
-            {footerNavLinks.map((link) => (
-              <Link key={link.href} to={link.href} className="hover:text-teal">
+        <div className="mt-12 border-t border-white/10 pt-8 text-center">
+          <div className="flex flex-wrap items-center justify-center gap-4 text-sm font-semibold text-white/60 sm:gap-6">
+            {legalLinks.map((link) => (
+              <Link key={link.href} to={link.href} className="hover:text-white">
                 {link.label}
               </Link>
             ))}
+            <Link to="/kontakt" className="hover:text-white">
+              Kontakt
+            </Link>
           </div>
-          <div className="mt-4 space-y-1 text-base text-grey-soft">
-            <p>Gut begleitet – Verein für Alltagshilfe für Senioren</p>
-            <p>ZVR-Zahl 1429148037</p>
-            <p>&copy; {new Date().getFullYear()} Gut begleitet</p>
+          <div className="mt-4 space-y-1 text-base text-white/50">
+            <p>
+              &copy; {new Date().getFullYear()} Gut begleitet · Vereinsregister-Nr. {zvrNumber}
+            </p>
           </div>
         </div>
       </div>

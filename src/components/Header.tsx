@@ -1,7 +1,13 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Logo from "./Logo";
-import { navLinks } from "../data/content";
+import { navCta, navLinks } from "../content/site";
+
+// PROJECT BASELINE
+// The top navigation is intentionally frozen based on management approval.
+// Future feature sprints should only implement or improve the destination pages.
+// Do not redesign, remove, or reorder navigation items unless a new management
+// decision explicitly requests it.
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -56,10 +62,10 @@ export default function Header() {
 
         <div className="hidden shrink-0 xl:block">
           <Link
-            to="/beratung"
+            to={navCta.href}
             className="inline-flex items-center rounded-full bg-orange px-5 py-3 text-base font-bold text-white shadow-md shadow-orange/25 transition-all hover:bg-orange-dark"
           >
-            Termin buchen
+            {navCta.label}
           </Link>
         </div>
 
@@ -100,10 +106,10 @@ export default function Header() {
               </Link>
             ))}
             <Link
-              to="/beratung"
+              to={navCta.href}
               className="mt-2 flex items-center justify-center rounded-full bg-orange px-5 py-4 text-lg font-bold text-white"
             >
-              Termin buchen
+              {navCta.label}
             </Link>
           </nav>
         </div>
