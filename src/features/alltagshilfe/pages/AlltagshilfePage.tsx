@@ -7,7 +7,6 @@ import HowItWorksSection from "../components/HowItWorksSection";
 import PricingSection from "../components/PricingSection";
 import TrustSection from "../components/TrustSection";
 import FaqSection from "../components/FaqSection";
-import TestimonialsSection from "../components/TestimonialsSection";
 import { hero } from "../../../content/alltagshilfe/hero";
 import { bookingCta, contactCta } from "../../../content/alltagshilfe/cta";
 
@@ -21,7 +20,16 @@ export default function AlltagshilfePage() {
         ogImage="https://gutbegleitet.org/gut-begleitet-hero.jpeg"
       />
 
-      <Hero eyebrow={hero.eyebrow} title={hero.title} description={hero.subheadline} />
+      <Hero
+        eyebrow={hero.eyebrow}
+        title={hero.title}
+        description={hero.subheadline}
+        backgroundImage={hero.backgroundImage}
+        backgroundAlt={hero.backgroundAlt}
+        backgroundPositionClassName={hero.backgroundPositionClassName}
+        primaryCta={hero.primaryCta}
+        secondaryCta={hero.secondaryCta}
+      />
 
       <Section background="white">
         <div className="mx-auto max-w-3xl space-y-6 text-lg leading-relaxed text-gray-700">
@@ -44,7 +52,6 @@ export default function AlltagshilfePage() {
 
       <TrustSection />
       <FaqSection />
-      <TestimonialsSection />
 
       <CTABanner
         title={contactCta.title}

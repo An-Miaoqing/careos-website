@@ -29,13 +29,13 @@ export default function ImpressumPage() {
                     Österreich
                   </p>
                   <p>
-                    <span className="font-semibold text-gray-900">Telefon:</span> [placeholder]
+                    <span className="font-semibold text-gray-900">Telefon:</span> +43 681 1019 4236
                   </p>
                   <p>
-                    <span className="font-semibold text-gray-900">E-Mail:</span> [placeholder]
+                    <span className="font-semibold text-gray-900">E-Mail:</span> gutbegleitetwien@gmail.com
                   </p>
                   <p>
-                    <span className="font-semibold text-gray-900">Vertretungsberechtigte Person:</span> [placeholder]
+                    <span className="font-semibold text-gray-900">Vertretungsberechtigte Person:</span> Günter Pytel Guo
                   </p>
                 </div>
               </div>

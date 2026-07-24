@@ -4,15 +4,14 @@ import CTABanner from "../../../shared/components/CTABanner/CTABanner";
 import IntroductionSection from "../components/IntroductionSection";
 import WhatIsSalonClubSection from "../components/WhatIsSalonClubSection";
 import ActivitiesSection from "../components/ActivitiesSection";
-import WeeklyProgrammeSection from "../components/WeeklyProgrammeSection";
-import EventsSection from "../components/EventsSection";
+import WeeklyScheduleSection from "../components/WeeklyScheduleSection";
 import GallerySection from "../components/GallerySection";
 import VenueSection from "../components/VenueSection";
 import TeamSection from "../components/TeamSection";
 import AudienceSection from "../components/AudienceSection";
 import FaqSection from "../components/FaqSection";
 import { hero } from "../../../content/salon/hero";
-import { membershipCta, contactCta } from "../../../content/salon/cta";
+import { communityCta } from "../../../content/salon/cta";
 
 export default function SalonPage() {
   return (
@@ -37,8 +36,7 @@ export default function SalonPage() {
       <IntroductionSection />
       <WhatIsSalonClubSection />
       <ActivitiesSection />
-      <WeeklyProgrammeSection />
-      <EventsSection />
+      <WeeklyScheduleSection />
       <GallerySection />
       <VenueSection />
       <TeamSection />
@@ -46,17 +44,12 @@ export default function SalonPage() {
       <FaqSection />
 
       <CTABanner
-        title={membershipCta.title}
-        description={membershipCta.description}
-        buttonLabel={membershipCta.buttonLabel}
-        buttonHref={membershipCta.buttonHref}
-      />
-
-      <CTABanner
-        title={contactCta.title}
-        description={contactCta.description}
-        buttonLabel={contactCta.buttonLabel}
-        buttonHref={contactCta.buttonHref}
+        title={communityCta.title}
+        description={communityCta.description}
+        buttonLabel={communityCta.primaryLabel}
+        buttonHref={communityCta.primaryHref}
+        secondaryLabel={communityCta.secondaryLabel}
+        secondaryHref={communityCta.secondaryHref}
       />
     </>
   );

@@ -7,6 +7,8 @@ type CTABannerProps = {
   description?: string;
   buttonLabel?: string;
   buttonHref?: string;
+  secondaryLabel?: string;
+  secondaryHref?: string;
 };
 
 export default function CTABanner({
@@ -14,7 +16,10 @@ export default function CTABanner({
   description = "Wir nehmen uns Zeit für Ihre Fragen. Rufen Sie uns an oder buchen Sie eine Beratung – ganz ohne Verpflichtung.",
   buttonLabel = "Termin buchen",
   buttonHref = "/beratung",
+  secondaryLabel,
+  secondaryHref,
 }: CTABannerProps) {
+  const hasDualAction = Boolean(secondaryLabel && secondaryHref);
   return (
     <section className="py-16 sm:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -26,19 +31,38 @@ export default function CTABanner({
             <h2 className="text-3xl font-extrabold text-white sm:text-4xl">{title}</h2>
             <p className="mt-4 text-xl leading-relaxed text-white/90">{description}</p>
             <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <a
-                href={contact.phoneHref}
-                className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-orange px-8 py-4 text-lg font-bold text-white shadow-lg transition-colors hover:bg-orange-dark sm:w-auto"
-              >
-                <PhoneIcon />
-                {contact.phoneDisplay}
-              </a>
-              <Link
-                to={buttonHref}
-                className="inline-flex w-full items-center justify-center rounded-full border-2 border-white px-8 py-4 text-lg font-bold text-white transition-colors hover:bg-white/10 sm:w-auto"
-              >
-                {buttonLabel}
-              </Link>
+              {hasDualAction ? (
+                <>
+                  <Link
+                    to={buttonHref}
+                    className="inline-flex w-full items-center justify-center rounded-full bg-orange px-8 py-4 text-lg font-bold text-white shadow-lg transition-colors hover:bg-orange-dark sm:w-auto"
+                  >
+                    {buttonLabel}
+                  </Link>
+                  <Link
+                    to={secondaryHref!}
+                    className="inline-flex w-full items-center justify-center rounded-full border-2 border-white px-8 py-4 text-lg font-bold text-white transition-colors hover:bg-white/10 sm:w-auto"
+                  >
+                    {secondaryLabel}
+                  </Link>
+                </>
+              ) : (
+                <>
+                  <a
+                    href={contact.phoneHref}
+                    className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-orange px-8 py-4 text-lg font-bold text-white shadow-lg transition-colors hover:bg-orange-dark sm:w-auto"
+                  >
+                    <PhoneIcon />
+                    {contact.phoneDisplay}
+                  </a>
+                  <Link
+                    to={buttonHref}
+                    className="inline-flex w-full items-center justify-center rounded-full border-2 border-white px-8 py-4 text-lg font-bold text-white transition-colors hover:bg-white/10 sm:w-auto"
+                  >
+                    {buttonLabel}
+                  </Link>
+                </>
+              )}
             </div>
           </div>
         </div>

@@ -1,7 +1,8 @@
-import { missionContent } from "../../../content/about";
+import { missionContent, testimonials } from "../../../content/about";
 import Hero from "../../../shared/components/Hero/Hero";
 import SectionTitle from "../../../shared/components/SectionTitle/SectionTitle";
 import CTABanner from "../../../shared/components/CTABanner/CTABanner";
+import Testimonial from "../../../shared/components/Testimonial/Testimonial";
 
 export default function AboutPage() {
   const { welcome, mission, highlights, forWhom } = missionContent;
@@ -30,8 +31,8 @@ export default function AboutPage() {
 
             <div className="overflow-hidden rounded-3xl shadow-lg">
               <img
-                src="/about-us.jpeg"
-                alt="Betreuerin und Seniorin in vertrauensvollem Gespräch"
+                src="/team.jpg"
+                alt="Das Gut Begleitet Team gemeinsam bei einem Treffen"
                 className="aspect-[4/3] w-full object-cover"
                 width={800}
                 height={600}
@@ -77,6 +78,17 @@ export default function AboutPage() {
       </section>
 
       <CTABanner />
+
+      <section className="py-16 sm:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <SectionTitle eyebrow={testimonials.label} title={testimonials.title} />
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {testimonials.items.map((item) => (
+              <Testimonial key={item.id} quote={item.quote} name={item.name} relation={item.relation} />
+            ))}
+          </div>
+        </div>
+      </section>
     </>
   );
 }

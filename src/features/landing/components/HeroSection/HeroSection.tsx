@@ -21,7 +21,7 @@ export default function HeroSection() {
       />
       <div className="absolute inset-0 bg-navy/55" aria-hidden="true" />
 
-      <div className="relative mx-auto flex w-full max-w-5xl flex-col items-center px-4 text-center sm:px-6 lg:px-8">
+      <div className="relative mx-auto mt-10 flex w-full max-w-5xl flex-col items-center px-4 text-center sm:mt-16 sm:px-6 lg:mt-20 lg:px-8">
         <Badge variant="eyebrow" className="!text-white">
           {hero.eyebrow}
         </Badge>

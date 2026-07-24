@@ -63,9 +63,9 @@ export default function DatenschutzPage() {
               <div>
                 <h2 className="text-2xl font-bold text-teal">7. Kontakt</h2>
                 <p className="mt-4">
-                  Telefon: [placeholder]
+                  Telefon: +43 681 1019 4236
                   <br />
-                  E-Mail: [placeholder]
+                  E-Mail: gutbegleitetwien@gmail.com
                 </p>
               </div>
             </div>

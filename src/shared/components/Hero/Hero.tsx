@@ -11,6 +11,7 @@ type HeroProps = {
   eyebrow?: string;
   backgroundImage?: string;
   backgroundAlt?: string;
+  backgroundPositionClassName?: string;
   primaryCta?: HeroCta;
   secondaryCta?: HeroCta;
 };
@@ -42,6 +43,7 @@ export default function Hero({
   eyebrow,
   backgroundImage,
   backgroundAlt,
+  backgroundPositionClassName,
   primaryCta,
   secondaryCta,
 }: HeroProps) {
@@ -51,7 +53,7 @@ export default function Hero({
         <img
           src={backgroundImage}
           alt={backgroundAlt ?? ""}
-          className="absolute inset-0 h-full w-full object-cover"
+          className={`absolute inset-0 h-full w-full object-cover ${backgroundPositionClassName ?? ""}`}
           loading="eager"
           decoding="async"
         />

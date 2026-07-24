@@ -27,6 +27,9 @@
   --color-panel-orange-start: #e87b3e;
   --color-panel-orange-end: #8b3a12;
   --color-about-overlay: #00505c;
+
+  /* Gut Begleitet Friend / "robot" accent — calm medium blue, not dark navy */
+  --color-friend-blue: #0d98ba;
 }
 
 html {

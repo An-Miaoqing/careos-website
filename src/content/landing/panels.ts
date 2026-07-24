@@ -9,8 +9,12 @@ export type LandingPanel = {
   ctaHref: string;
   icon: "home" | "family" | "robot";
   gradientClassName: string;
+  backgroundImage: string;
+  backgroundAlt: string;
+  backgroundPositionClassName?: string;
   badge?: string;
   ctaMuted?: boolean;
+  hoverEnabled?: boolean;
 };
 
 export const panels: LandingPanel[] = [
@@ -26,6 +30,9 @@ export const panels: LandingPanel[] = [
     ctaHref: "/alltagshilfe",
     icon: "home",
     gradientClassName: "from-panel-teal-start to-panel-teal-end",
+    backgroundImage: "/01alltagshilfe.jpeg",
+    backgroundAlt: "Betreuerin unterstützt ein älteres Paar zu Hause",
+    backgroundPositionClassName: "object-[center_30%]",
   },
   {
     id: "salon",
@@ -39,6 +46,8 @@ export const panels: LandingPanel[] = [
     ctaHref: "/salon",
     icon: "family",
     gradientClassName: "from-panel-orange-start to-panel-orange-end",
+    backgroundImage: "/salon-activity-2.png",
+    backgroundAlt: "Generationenübergreifender Zeichen-Workshop im Gut Begleitet Salon",
   },
   {
     id: "friend",
@@ -52,7 +61,11 @@ export const panels: LandingPanel[] = [
     ctaHref: "/friend",
     icon: "robot",
     gradientClassName: "from-navy to-navy-dark",
+    backgroundImage: "/gut-friend-1.png",
+    backgroundAlt: "Gut Begleitet Friend auf einem Wohnzimmertisch",
+    backgroundPositionClassName: "object-[40%_center]",
     badge: "Demnächst",
     ctaMuted: true,
+    hoverEnabled: false,
   },
 ];

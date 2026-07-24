@@ -1,31 +1,18 @@
-import { Link } from "react-router-dom";
 import type { Service } from "../../../content/alltagshilfe/services";
-import { ServiceIcon, ArrowRightIcon } from "../../../shared/components/icons";
 
 type ServiceCardProps = {
-  service: Pick<Service, "id" | "title" | "shortDescription" | "icon" | "color">;
-  compact?: boolean;
+  service: Pick<Service, "title" | "image">;
 };
 
-export default function ServiceCard({ service, compact = false }: ServiceCardProps) {
-  const bgClass = service.color === "teal" ? "bg-teal" : "bg-orange";
-
+export default function ServiceCard({ service }: ServiceCardProps) {
   return (
-    <article className="flex flex-col rounded-3xl border border-grey-light bg-white p-7 shadow-sm transition-shadow hover:shadow-md">
-      <div className={`flex h-16 w-16 items-center justify-center rounded-full text-white ${bgClass}`}>
-        <ServiceIcon name={service.icon} />
-      </div>
-      <h3 className="mt-5 text-xl font-bold text-gray-900">{service.title}</h3>
-      <p className="mt-3 flex-1 text-base leading-relaxed text-gray-700">{service.shortDescription}</p>
-      {!compact && (
-        <Link
-          to={`/alltagshilfe#${service.id}`}
-          className="mt-5 inline-flex items-center gap-2 text-base font-bold text-teal hover:text-teal-dark"
-        >
-          Mehr erfahren
-          <ArrowRightIcon className="h-4 w-4" />
-        </Link>
-      )}
+    <article className="overflow-hidden rounded-3xl border border-grey-light bg-white shadow-sm transition-shadow hover:shadow-md">
+      <img
+        src={service.image}
+        alt={service.title}
+        loading="lazy"
+        className="h-48 w-full object-cover object-[center_20%] sm:h-56"
+      />
     </article>
   );
 }
