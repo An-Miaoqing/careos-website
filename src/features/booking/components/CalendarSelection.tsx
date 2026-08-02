@@ -1,20 +1,36 @@
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import type { AvailabilitySlot, BookingFormData } from "../../../types/booking";
+import styles from "./CalendarSelection.module.css";
+
+const toDateKey = (date: Date) => {
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const day = String(date.getDate()).padStart(2, "0");
+
+  return `${year}-${month}-${day}`;
+};
+
+const bookingWindowStart = new Date();
+bookingWindowStart.setHours(0, 0, 0, 0);
+bookingWindowStart.setDate(bookingWindowStart.getDate() + 1);
+
+const bookingWindowEnd = new Date(bookingWindowStart);
+bookingWindowEnd.setMonth(bookingWindowEnd.getMonth() + 3);
 
 const generateAvailability = () => {
-  const today = new Date();
   const dates: AvailabilitySlot[] = [];
 
-  for (let i = 0; i < 180; i += 1) {
-    const current = new Date(today);
-    current.setDate(today.getDate() + i);
-
+  for (
+    const current = new Date(bookingWindowStart);
+    current <= bookingWindowEnd;
+    current.setDate(current.getDate() + 1)
+  ) {
     if (current.getDay() === 0 || current.getDay() === 6) {
       continue;
     }
 
-    const isoDate = current.toISOString().slice(0, 10);
+    const isoDate = toDateKey(current);
     const label = current.toLocaleDateString("de-DE", {
       weekday: "short",
       day: "2-digit",
@@ -27,16 +43,13 @@ const generateAvailability = () => {
     }
 
     dates.push({ date: isoDate, label, slots });
-
-    if (dates.length >= 24) {
-      break;
-    }
   }
 
   return dates;
 };
 
 export const availability = generateAvailability();
+const availableDates = new Set(availability.map((slot) => slot.date));
 
 type CalendarSelectionProps = {
   form: BookingFormData;
@@ -45,75 +58,103 @@ type CalendarSelectionProps = {
 };
 
 export default function CalendarSelection({ form, updateField, selectedDate }: CalendarSelectionProps) {
-  return (
-    <div className="grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
-      <div className="space-y-5">
-        <div>
-          <h3 className="text-xl font-extrabold text-gray-900">Kalender</h3>
-          <p className="mt-2 text-base leading-relaxed text-gray-700">
-            Wählen Sie ein zukünftiges Datum. Danach erscheinen die verfügbaren Uhrzeiten.
-          </p>
-        </div>
+  const selectedDateValue = form.date ? new Date(`${form.date}T12:00:00`) : undefined;
 
-        <div className="rounded-[1.5rem] border border-grey-light bg-white p-3 shadow-sm sm:p-4">
+  return (
+    <div>
+      <div className={styles.intro}>
+        <p className={styles.eyebrow}>Schritt 01 · Wunschtermin</p>
+        <h3>Wann dürfen wir Sie begleiten?</h3>
+        <p>Wählen Sie zuerst einen verfügbaren Tag und anschließend eine Uhrzeit.</p>
+      </div>
+
+      <div className={styles.bookingGrid}>
+        <div className={styles.calendarCard}>
+          <div className={styles.calendarMeta}>
+            <span>Verfügbare Termine</span>
+            <span><i aria-hidden="true" />Buchbarer Tag</span>
+          </div>
           <Calendar
             onChange={(value) => {
               if (value instanceof Date) {
-                const isoDate = value.toISOString().slice(0, 10);
+                const isoDate = toDateKey(value);
                 updateField("date", isoDate);
                 updateField("time", "");
               }
             }}
-            value={form.date ? new Date(form.date) : undefined}
-            minDate={new Date(new Date().setDate(new Date().getDate() + 1))}
-            maxDate={new Date(new Date().setMonth(new Date().getMonth() + 3))}
+            value={selectedDateValue}
+            minDate={bookingWindowStart}
+            maxDate={bookingWindowEnd}
             locale="de-DE"
-            className="w-full rounded-[1.25rem] border-0"
+            className={styles.calendar}
+            tileDisabled={({ date, view }) => view === "month" && !availableDates.has(toDateKey(date))}
             tileClassName={({ date }) => {
-              const isoDate = date.toISOString().slice(0, 10);
+              const isoDate = toDateKey(date);
               const isSelected = form.date === isoDate;
-              const isToday = date.toDateString() === new Date().toDateString();
-              return `rounded-xl ${isSelected ? "bg-teal text-white" : ""} ${isToday ? "font-extrabold ring-2 ring-orange" : ""}`;
+              return `${styles.dayTile} ${isSelected ? styles.selectedDay : ""}`;
             }}
+            tileContent={({ date, view }) => view === "month" && availableDates.has(toDateKey(date)) ? (
+              <span className={styles.availabilityDot} aria-hidden="true" />
+            ) : null}
+            formatShortWeekday={(locale, date) => date.toLocaleDateString(locale, { weekday: "short" }).replace(".", "")}
+            formatMonthYear={(locale, date) => date.toLocaleDateString(locale, { month: "long", year: "numeric" })}
+            navigationAriaLabel="Kalendermonat auswählen"
+            prevAriaLabel="Vorheriger Monat"
+            nextAriaLabel="Nächster Monat"
+            prevLabel={<span aria-hidden="true">←</span>}
+            nextLabel={<span aria-hidden="true">→</span>}
             prev2Label={null}
             next2Label={null}
+            showNeighboringMonth={false}
           />
         </div>
 
-        {selectedDate && (
-          <div className="rounded-[1.5rem] border border-grey-light bg-white p-5 shadow-sm">
-            <h4 className="text-lg font-bold text-gray-900">Verfügbare Uhrzeiten</h4>
-            <p className="mt-1 text-sm text-gray-600">Bitte wählen Sie eine Uhrzeit für {selectedDate.label}.</p>
-            <div className="mt-4 flex flex-wrap gap-3">
-              {selectedDate.slots.map((slot) => (
-                <button
-                  key={slot}
-                  type="button"
-                  onClick={() => updateField("time", slot)}
-                  className={`rounded-full border px-4 py-2 text-sm font-semibold transition-all ${
-                    form.time === slot
-                      ? "border-teal bg-teal text-white"
-                      : "border-grey-light bg-white text-gray-700 hover:border-teal/40"
-                  }`}
-                >
-                  {slot} Uhr
-                </button>
-              ))}
+        <div className={styles.sidebar}>
+          <aside className={styles.selectionCard}>
+            <div className={styles.selectionHeading}>
+              <span>Ihre Auswahl</span>
+              <i aria-hidden="true">✓</i>
             </div>
-          </div>
-        )}
-      </div>
+            <div className={styles.selectionDetails}>
+              <div>
+                <span>Datum</span>
+                <strong>{selectedDate?.label ?? "Noch nicht gewählt"}</strong>
+              </div>
+              <div>
+                <span>Uhrzeit</span>
+                <strong>{form.time ? `${form.time} Uhr` : "Noch nicht gewählt"}</strong>
+              </div>
+            </div>
+            <p className={styles.selectionHint}>
+              {form.date && form.time
+                ? "Ihr Wunschtermin ist bereit für den nächsten Schritt."
+                : "Datum und Uhrzeit können später vor dem Absenden noch einmal geprüft werden."}
+            </p>
+          </aside>
 
-      <div className="rounded-[1.5rem] bg-white p-6 shadow-sm ring-1 ring-grey-light">
-        <h3 className="text-xl font-extrabold text-gray-900">Ihre Auswahl</h3>
-        <div className="mt-5 space-y-4 text-sm text-gray-700">
-          <div className="rounded-2xl bg-beige p-4">
-            <p className="font-semibold text-gray-900">Datum</p>
-            <p className="mt-1">{selectedDate?.label ?? "Bitte wählen Sie ein Datum"}</p>
-          </div>
-          <div className="rounded-2xl bg-beige p-4">
-            <p className="font-semibold text-gray-900">Uhrzeit</p>
-            <p className="mt-1">{form.time ? `${form.time} Uhr` : "Bitte wählen Sie eine Uhrzeit"}</p>
+          <div className={styles.timeCard}>
+            <div>
+              <span className={styles.timeEyebrow}>Verfügbare Uhrzeiten</span>
+              <h4>{selectedDate?.label ?? "Zuerst Datum wählen"}</h4>
+            </div>
+            {selectedDate ? (
+              <div className={styles.timeSlots}>
+                {selectedDate.slots.map((slot) => (
+                  <button
+                    key={slot}
+                    type="button"
+                    onClick={() => updateField("time", slot)}
+                    className={form.time === slot ? styles.selectedTime : undefined}
+                    aria-pressed={form.time === slot}
+                  >
+                    <span>{slot}</span>
+                    <small>Uhr</small>
+                  </button>
+                ))}
+              </div>
+            ) : (
+              <p className={styles.timeEmpty}>Die verfügbaren Zeiten erscheinen nach der Datumswahl.</p>
+            )}
           </div>
         </div>
       </div>

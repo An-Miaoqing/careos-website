@@ -11,6 +11,7 @@ export type Service = {
 export type ServiceCategory = {
   id: string;
   label: string;
+  icon: string;
   description: string;
   services: Service[];
 };
@@ -107,42 +108,49 @@ export const serviceCategories: ServiceCategory[] = [
   {
     id: "daily-living",
     label: "Alltag",
+    icon: "help",
     description: "Die kleinen Dinge, die im Alltag den großen Unterschied machen.",
     services: [kleineHilfen],
   },
   {
     id: "companionship",
     label: "Gesellschaft",
+    icon: "chat",
     description: "Zeit, Aufmerksamkeit und ein offenes Ohr für gute Gespräche.",
     services: [gesellschaft],
   },
   {
     id: "household",
     label: "Haushalt",
+    icon: "home",
     description: "Unterstützung bei Hausarbeit und Wäsche – damit Ihr Zuhause gemütlich bleibt.",
     services: [haushalt, waesche],
   },
   {
     id: "appointments",
     label: "Termine",
+    icon: "medical",
     description: "Sichere Begleitung zu Arzt- und anderen wichtigen Terminen.",
     services: [arzt],
   },
   {
     id: "shopping",
     label: "Einkaufen",
+    icon: "shopping",
     description: "Einkäufe und Besorgungen, zuverlässig nach Ihrer Liste erledigt.",
     services: [einkaufen],
   },
   {
     id: "mobility",
     label: "Mobilität",
+    icon: "walk",
     description: "Gemeinsame Spaziergänge und Ausflüge für frische Luft und Bewegung.",
     services: [spaziergaenge],
   },
   {
     id: "special-requests",
     label: "Individuelle Anfragen",
+    icon: "star",
     description: "Maßgeschneiderte Betreuung für alles, was nicht in eine Kategorie passt.",
     services: [individuell],
   },
