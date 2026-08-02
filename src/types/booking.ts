@@ -3,6 +3,7 @@ export type BookingStep = 1 | 2 | 3 | 4;
 export type BookingService = {
   id: string;
   serviceCode: string;
+  category: string;
   title: string;
   description: string;
   icon: string;

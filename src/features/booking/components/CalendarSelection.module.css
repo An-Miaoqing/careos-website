@@ -1,0 +1,388 @@
+.eyebrow {
+  margin: 0;
+  color: var(--color-orange-dark);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.intro {
+  margin-bottom: 1.25rem;
+}
+
+.intro h3 {
+  margin: 0.5rem 0 0;
+  color: #111827;
+  font-size: clamp(1.5rem, 3vw, 1.875rem);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.intro > p:last-child {
+  margin: 0.5rem 0 0;
+  color: #374151;
+  font-size: 1rem;
+  line-height: 1.625;
+}
+
+.bookingGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 34rem) minmax(17rem, 1fr);
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.sidebar {
+  position: sticky;
+  top: 7rem;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  gap: 1rem;
+  align-self: stretch;
+}
+
+.calendarCard {
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--color-teal) 18%, white);
+  border-radius: 1.75rem;
+  background: linear-gradient(145deg, #f7fcfb 0%, #fff 46%, #fffaf3 100%);
+  box-shadow: 0 24px 55px rgba(10, 107, 109, 0.1);
+}
+
+.calendarMeta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid rgba(15, 139, 141, 0.11);
+  color: #66736f;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.calendarMeta span:last-child {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.calendarMeta i {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--color-orange);
+  box-shadow: 0 0 0 4px var(--color-orange-light);
+}
+
+.calendar {
+  width: 100%;
+  padding: clamp(0.9rem, 2.5vw, 1.35rem);
+  border: 0;
+  background: transparent;
+  font-family: inherit;
+}
+
+.calendar :global(.react-calendar__navigation) {
+  display: grid;
+  grid-template-columns: 2.8rem minmax(0, 1fr) 2.8rem;
+  gap: 0.65rem;
+  height: auto;
+  margin: 0 0 1.25rem;
+}
+
+.calendar :global(.react-calendar__navigation button) {
+  min-width: 0;
+  min-height: 2.8rem;
+  border-radius: 999px;
+  color: var(--color-teal-dark);
+  font: inherit;
+  font-weight: 800;
+  text-transform: capitalize;
+  transition: background-color 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.calendar :global(.react-calendar__navigation button:enabled:hover),
+.calendar :global(.react-calendar__navigation button:enabled:focus) {
+  background: var(--color-teal-light);
+  color: var(--color-teal-dark);
+}
+
+.calendar :global(.react-calendar__navigation__label) {
+  font-family: var(--font-serif);
+  font-size: clamp(1.25rem, 3vw, 1.65rem);
+}
+
+.calendar :global(.react-calendar__navigation__prev-button),
+.calendar :global(.react-calendar__navigation__next-button) {
+  border: 1px solid rgba(15, 139, 141, 0.16);
+  background: #fff;
+  box-shadow: 0 5px 14px rgba(10, 107, 109, 0.08);
+  font-size: 1.1rem;
+}
+
+.calendar :global(.react-calendar__month-view__weekdays) {
+  margin-bottom: 0.6rem;
+  color: #78837f;
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.calendar :global(.react-calendar__month-view__weekdays__weekday) {
+  padding: 0.45rem 0;
+}
+
+.calendar :global(.react-calendar__month-view__weekdays__weekday abbr) {
+  text-decoration: none;
+}
+
+.calendar :global(.react-calendar__month-view__days) {
+  gap: 0.3rem 0;
+}
+
+.calendar :global(.react-calendar__tile) {
+  position: relative;
+  display: grid;
+  min-width: 0;
+  min-height: clamp(2.9rem, 6vw, 3.55rem);
+  place-items: center;
+  border: 4px solid transparent;
+  border-radius: 1rem;
+  background-clip: padding-box;
+  color: #28443f;
+  font: inherit;
+  font-size: clamp(0.9rem, 2vw, 1.05rem);
+  font-weight: 800;
+  transition: color 160ms ease, background-color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+}
+
+.calendar :global(.react-calendar__tile:enabled:hover),
+.calendar :global(.react-calendar__tile:enabled:focus) {
+  background: var(--color-teal-light);
+  color: var(--color-teal-dark);
+  transform: translateY(-1px);
+}
+
+.calendar :global(.react-calendar__tile:disabled) {
+  background: transparent;
+  color: #c4cbc8;
+  cursor: not-allowed;
+}
+
+.calendar :global(.react-calendar__tile--active),
+.calendar :global(.react-calendar__tile--active:enabled:hover),
+.calendar :global(.react-calendar__tile--active:enabled:focus),
+.calendar .selectedDay {
+  background: linear-gradient(145deg, var(--color-teal), var(--color-teal-dark));
+  color: #fff;
+  box-shadow: 0 9px 18px rgba(10, 107, 109, 0.24);
+}
+
+.availabilityDot {
+  position: absolute;
+  bottom: 0.45rem;
+  width: 0.32rem;
+  height: 0.32rem;
+  border-radius: 50%;
+  background: var(--color-orange);
+}
+
+.selectedDay .availabilityDot {
+  background: #ffd6a1;
+}
+
+.timeCard {
+  display: grid;
+  gap: 1rem;
+  padding: clamp(1.15rem, 3vw, 1.6rem);
+  border: 1px solid rgba(242, 140, 40, 0.24);
+  border-radius: 1.5rem;
+  background: var(--color-orange-light);
+}
+
+.timeEyebrow {
+  color: var(--color-orange-dark);
+  font-size: 0.65rem;
+  font-weight: 900;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.timeCard h4 {
+  margin: 0.3rem 0 0;
+  color: #263e39;
+  font-size: 1.1rem;
+  font-weight: 900;
+}
+
+.timeSlots {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.6rem;
+}
+
+.timeSlots button {
+  display: flex;
+  min-height: 3.2rem;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.25rem;
+  border: 1px solid rgba(15, 139, 141, 0.18);
+  border-radius: 0.9rem;
+  background: #fff;
+  color: #36534d;
+  font: inherit;
+  font-size: 1rem;
+  font-weight: 900;
+  box-shadow: 0 5px 14px rgba(10, 107, 109, 0.06);
+  transition: transform 160ms ease, border-color 160ms ease, background-color 160ms ease, color 160ms ease;
+}
+
+.timeSlots button:hover {
+  border-color: var(--color-teal);
+  transform: translateY(-1px);
+}
+
+.timeSlots button small {
+  font-size: 0.68rem;
+  font-weight: 700;
+}
+
+.timeSlots .selectedTime {
+  border-color: var(--color-teal);
+  background: var(--color-teal);
+  color: #fff;
+  box-shadow: 0 9px 18px rgba(10, 107, 109, 0.2);
+}
+
+.timeEmpty {
+  margin: 0;
+  color: #6d5a43;
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+.selectionCard {
+  overflow: hidden;
+  padding: clamp(1.25rem, 3vw, 1.75rem);
+  border: 1px solid rgba(15, 139, 141, 0.16);
+  border-radius: 1.75rem;
+  background: linear-gradient(160deg, var(--color-teal-dark), #07585a);
+  color: #fff;
+  box-shadow: 0 24px 55px rgba(10, 107, 109, 0.2);
+}
+
+.selectionHeading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.selectionHeading span {
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.selectionHeading i {
+  display: grid;
+  width: 2rem;
+  height: 2rem;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--color-orange);
+  font-size: 0.8rem;
+  font-style: normal;
+}
+
+.selectionDetails {
+  display: grid;
+  gap: 0;
+}
+
+.selectionDetails > div {
+  display: grid;
+  gap: 0.35rem;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.13);
+}
+
+.selectionDetails span {
+  color: #aee0df;
+  font-size: 0.67rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.selectionDetails strong {
+  font-size: 1.05rem;
+  line-height: 1.25;
+}
+
+.selectionHint {
+  margin: 1.25rem 0 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.82rem;
+  line-height: 1.55;
+}
+
+@media (max-width: 900px) {
+  .bookingGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: static;
+  }
+}
+
+@media (max-width: 720px) {
+  .calendarMeta {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .calendar :global(.react-calendar__tile) {
+    min-height: 3rem;
+    border-width: 2px;
+    border-radius: 0.75rem;
+  }
+
+}
+
+@media (max-width: 420px) {
+  .calendar {
+    padding: 0.85rem 0.55rem 1rem;
+  }
+
+  .calendar :global(.react-calendar__navigation) {
+    grid-template-columns: 2.5rem minmax(0, 1fr) 2.5rem;
+  }
+
+  .calendar :global(.react-calendar__navigation button) {
+    min-height: 2.5rem;
+  }
+
+  .calendar :global(.react-calendar__month-view__days) {
+    gap: 0;
+  }
+
+  .calendar :global(.react-calendar__tile) {
+    min-height: 2.75rem;
+    font-size: 0.85rem;
+  }
+
+  .availabilityDot {
+    bottom: 0.32rem;
+  }
+}
