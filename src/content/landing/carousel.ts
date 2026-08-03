@@ -19,6 +19,7 @@ export type EventCarouselCard = {
   ctaLabel: string;
   href: string;
   completed?: boolean;
+  categoryId: string;
 };
 
 export type ProjectCarouselCard = {
@@ -75,6 +76,7 @@ export const carouselCards: CarouselCardData[] = [
     price: "€ 5",
     ctaLabel: "Jetzt anmelden →",
     href: "/kontakt",
+    categoryId: "exercise",
   },
   {
     type: "event",
@@ -86,6 +88,7 @@ export const carouselCards: CarouselCardData[] = [
     price: "€ 5",
     ctaLabel: "Jetzt anmelden →",
     href: "/kontakt",
+    categoryId: "culture",
   },
   {
     type: "event",
@@ -97,6 +100,7 @@ export const carouselCards: CarouselCardData[] = [
     price: "€ 8",
     ctaLabel: "Jetzt anmelden →",
     href: "/kontakt",
+    categoryId: "celebrations",
   },
   {
     type: "project",
@@ -144,6 +148,7 @@ export const carouselCards: CarouselCardData[] = [
     price: "€ 3",
     ctaLabel: "Jetzt anmelden →",
     href: "/kontakt",
+    categoryId: "games",
   },
   {
     type: "news",
@@ -164,6 +169,7 @@ export const carouselCards: CarouselCardData[] = [
     price: "€ 5",
     ctaLabel: "Jetzt anmelden →",
     href: "/kontakt",
+    categoryId: "workshops",
   },
   {
     type: "project",
@@ -179,7 +185,7 @@ export const carouselCards: CarouselCardData[] = [
     id: "news-5",
     date: "Oktober 2026",
     title: "Freiwillige gesucht — Helfen Sie mit!",
-    text: "Sie möchten Senioren im Alltag unterstützen und dabei etwas Sinnvolles tun? Wir freuen uns auf Ihre Nachricht.",
+    text: "Sie möchten Senior:innen im Alltag unterstützen und dabei etwas Sinnvolles tun? Wir freuen uns auf Ihre Nachricht.",
     ctaLabel: "Jetzt melden →",
     href: "/kontakt",
   },
@@ -193,6 +199,7 @@ export const carouselCards: CarouselCardData[] = [
     price: "€ 5",
     ctaLabel: "Jetzt anmelden →",
     href: "/kontakt",
+    categoryId: "workshops",
   },
   {
     type: "more",

@@ -9,7 +9,7 @@ export type HelperProfile = {
 
 export const trust = {
   label: "Vertrauen & Sicherheit",
-  title: "Zuverlässige Menschen, denen Sie vertrauen können.",
+  title: "Zuverlässige Menschen, denen Sie vertrauen können",
   intro:
     "Alle unsere Helfer:innen werden persönlich ausgewählt, geprüft und begleitet. Sie bringen nicht nur Erfahrung mit – sondern echte Menschlichkeit.",
   association: {
@@ -35,7 +35,7 @@ export const helperProfiles: HelperProfile[] = [
     name: "Maria K.",
     role: "Alltagsbegleiterin · Wien",
     since: "seit 2025",
-    bio: "Maria hat Sozialpädagogik studiert und arbeitet seit Jahren mit Seniorinnen und Senioren. Sie liebt Spaziergänge, Kartenspiele und hat ein besonderes Gespür für Einsamkeit und sozialen Rückzug.",
+    bio: "Maria hat Sozialpädagogik studiert und arbeitet seit Jahren mit Senior:innen. Sie liebt Spaziergänge, Kartenspiele und hat ein besonderes Gespür für Einsamkeit und sozialen Rückzug.",
     skills: ["Spaziergänge & Freizeit", "Einkaufsbegleitung", "Soziale Aktivierung"],
   },
   {

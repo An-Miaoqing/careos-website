@@ -30,6 +30,25 @@
 
   /* Gut Begleitet Friend / "robot" accent — calm medium blue, not dark navy */
   --color-friend-blue: #0d98ba;
+
+  /* Senior-friendly type scale (client accessibility note, GB website 1.pdf):
+     larger body copy, larger headings, more generous line-height sitewide.
+     --text-xs/--text-sm intentionally left at Tailwind defaults — those back
+     nav pills, badges and card meta labels (UI chrome, not body copy). */
+  --text-base: 1.0625rem; /* 17px */
+  --text-base--line-height: 1.6;
+  --text-lg: 1.1875rem; /* 19px */
+  --text-lg--line-height: 1.6;
+  --text-xl: 1.3125rem; /* 21px */
+  --text-xl--line-height: 1.6;
+  --text-2xl: 1.625rem; /* 26px */
+  --text-2xl--line-height: 1.5;
+  --text-3xl: 2rem; /* 32px */
+  --text-3xl--line-height: 1.35;
+  --text-4xl: 2.375rem; /* 38px */
+  --text-4xl--line-height: 1.25;
+  --text-5xl: 3.25rem; /* 52px */
+  --text-5xl--line-height: 1.15;
 }
 
 html {

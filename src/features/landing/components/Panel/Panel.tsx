@@ -40,7 +40,7 @@ export default function Panel({ panel, isActive, isAnyActive, onActivate, onDeac
       <div className={`absolute inset-0 bg-gradient-to-br opacity-60 ${panel.gradientClassName}`} aria-hidden="true" />
 
       {panel.badge && (
-        <span className="absolute right-5 top-5 rounded-full bg-orange px-3 py-1 text-xs font-bold uppercase tracking-wider text-white">
+        <span className="absolute inset-x-0 top-0 bg-orange px-4 py-3 text-center text-sm font-bold uppercase tracking-[0.2em] text-white sm:text-base">
           {panel.badge}
         </span>
       )}

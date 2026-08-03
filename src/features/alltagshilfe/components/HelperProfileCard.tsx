@@ -9,13 +9,13 @@ export default function HelperProfileCard({ profile }: { profile: HelperProfile 
       <div className="flex items-center gap-4">
         <div
           aria-hidden="true"
-          className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-teal-light text-2xl font-extrabold text-teal"
+          className="flex h-20 w-20 shrink-0 items-center justify-center rounded-full bg-teal-light text-3xl font-extrabold text-teal"
         >
           {initial}
         </div>
         <div>
           <h3 className="text-lg font-bold text-gray-900">{profile.name}</h3>
-          <p className="text-sm text-grey-soft">
+          <p className="text-base text-grey-soft">
             {profile.role} · {profile.since}
           </p>
         </div>
@@ -25,8 +25,8 @@ export default function HelperProfileCard({ profile }: { profile: HelperProfile 
 
       <ul className="mt-4 space-y-2">
         {profile.skills.map((skill) => (
-          <li key={skill} className="flex items-center gap-2 text-sm font-semibold text-gray-800">
-            <CheckIcon className="h-4 w-4 shrink-0 text-teal" />
+          <li key={skill} className="flex items-center gap-2 text-base font-semibold text-gray-800">
+            <CheckIcon className="h-5 w-5 shrink-0 text-teal" />
             {skill}
           </li>
         ))}

@@ -13,7 +13,7 @@ type CTABannerProps = {
 
 export default function CTABanner({
   title = "Kostenlose Erstberatung – unverbindlich",
-  description = "Wir nehmen uns Zeit für Ihre Fragen. Rufen Sie uns an oder buchen Sie eine Beratung – ganz ohne Verpflichtung.",
+  description = "Wir nehmen uns Zeit für Ihre Fragen. Rufen Sie uns an oder buchen Sie eine Beratung – ganz ohne Verpflichtung",
   buttonLabel = "Termin buchen",
   buttonHref = "/beratung",
   secondaryLabel,

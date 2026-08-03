@@ -1,7 +1,7 @@
 import type { SalonEvent } from "../../../content/salon/events";
 import type { CalendarWeek } from "../../../shared/ui/WeeklyCalendar/WeeklyCalendar";
 
-const GERMAN_MONTHS: Record<string, number> = {
+export const GERMAN_MONTHS: Record<string, number> = {
   Januar: 0,
   Februar: 1,
   März: 2,
@@ -16,9 +16,11 @@ const GERMAN_MONTHS: Record<string, number> = {
   Dezember: 11,
 };
 
-const WEEKDAY_LABELS = ["Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag", "Sonntag"];
+export const GERMAN_MONTH_NAMES = Object.keys(GERMAN_MONTHS);
 
-function parseEventDate(dateText: string): Date {
+export const WEEKDAY_LABELS = ["Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag", "Sonntag"];
+
+export function parseEventDate(dateText: string): Date {
   const match = dateText.match(/(\d{1,2})\.\s+(\S+)\s+(\d{4})/);
   if (!match) {
     throw new Error(`Unrecognized event date format: "${dateText}"`);
@@ -26,6 +28,10 @@ function parseEventDate(dateText: string): Date {
   const [, day, monthName, year] = match;
   const month = GERMAN_MONTHS[monthName];
   return new Date(Number(year), month, Number(day));
+}
+
+export function monthKeyOf(date: Date): string {
+  return `${date.getFullYear()}-${date.getMonth()}`;
 }
 
 function mondayOf(date: Date): Date {
@@ -69,11 +75,12 @@ export function buildWeeklySchedule(events: SalonEvent[]): CalendarWeek[] {
           time: event.time,
           price: event.price,
           description: event.description,
+          categoryId: event.categoryId,
         }));
 
       return { day: label, date: formatDayDate(dayDate), events: dayEvents };
     });
 
-    return { weekLabel: formatWeekLabel(monday), days };
+    return { weekLabel: formatWeekLabel(monday), monthKey: monthKeyOf(monday), days };
   });
 }

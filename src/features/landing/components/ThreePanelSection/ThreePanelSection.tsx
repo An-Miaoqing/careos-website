@@ -15,7 +15,7 @@ export default function ThreePanelSection() {
       <Container className="text-center">
         <Badge variant="eyebrow">Wählen Sie Ihren Weg</Badge>
         <h2 className="mt-2 text-3xl font-extrabold text-teal sm:text-4xl">
-          Drei Angebote. Ein Ziel: Gut Begleitet.
+          Drei Angebote, ein Ziel: Gut Begleitet
         </h2>
         <p className="mt-3 hidden text-sm text-grey-soft lg:block">
           → Fahren Sie über einen Bereich, um mehr zu erfahren

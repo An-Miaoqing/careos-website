@@ -5,7 +5,7 @@ export const venue = {
   features: [
     "Heller Salon mit Wiener Charakter — Platz für bis zu 60 Gäste",
     "Professionelles Fotostudio für besondere Anlässe",
-    "Story Room für Vorträge, Diskussionen und Interviews",
+    "Story Room — Podcast- und Aufnahmestudio für Vorträge, Diskussionen und Interviews",
     "Vollausgestattete Küche für Koch-Events und Catering",
     "Barrierearmer Zugang im Erdgeschoss",
     "Zentrale Lage — U6 Burggasse, Straßenbahn direkt vor der Tür",

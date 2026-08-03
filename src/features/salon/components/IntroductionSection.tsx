@@ -6,9 +6,11 @@ export default function IntroductionSection() {
   return (
     <Section background="white">
       <SectionTitle eyebrow={introduction.label} title={introduction.title} />
-      <p className="mx-auto mt-6 max-w-3xl text-center text-lg leading-relaxed text-gray-700">
-        {introduction.text}
-      </p>
+      <div className="mx-auto mt-6 max-w-3xl space-y-4 text-center text-lg leading-relaxed text-gray-700">
+        {introduction.paragraphs.map((paragraph) => (
+          <p key={paragraph}>{paragraph}</p>
+        ))}
+      </div>
     </Section>
   );
 }

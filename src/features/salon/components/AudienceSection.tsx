@@ -8,6 +8,11 @@ export default function AudienceSection() {
   return (
     <Section background="white">
       <SectionTitle eyebrow={audience.label} title={audience.title} />
+
+      <blockquote className="mx-auto mt-8 max-w-2xl text-center">
+        <p className="font-script text-3xl leading-snug text-teal sm:text-4xl">{audience.quote}</p>
+      </blockquote>
+
       <div className="mt-10 grid gap-6 sm:grid-cols-3">
         {audience.segments.map((segment) => (
           <Card key={segment.id} className="text-center">

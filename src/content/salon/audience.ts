@@ -8,6 +8,7 @@ export type AudienceSegment = {
 export const audience = {
   label: "Für wen ist der Salon?",
   title: "Ein Ort für alle, die Gemeinschaft schätzen",
+  quote: "Ein Ort für alle: Gemeinsam statt einsam",
   segments: [
     {
       id: "seniors",

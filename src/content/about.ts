@@ -2,11 +2,11 @@ export const missionContent = {
   welcome: {
     title: "Herzlich willkommen bei Gut Begleitet",
     intro:
-      "Gut Begleitet ist Ihr verlässlicher Partner für Alltagshilfe und Begleitung in Wien. Wir unterstützen Senioren und Menschen, die im eigenen Zuhause leben bleiben möchten – und entlasten Angehörige, die eine vertrauensvolle Hilfe suchen.",
+      "Gut Begleitet ist Ihr verlässlicher Partner für Alltagshilfe und Begleitung in Wien. Wir sind da, wenn Unterstützung im Alltag gebraucht wird — und wenn jemand fehlt, der einfach da ist. Für Angehörige bedeutet das: eine vertrauensvolle Hilfe, auf die sie sich verlassen können.",
   },
   mission: {
     title: "Unsere Mission",
-    text: "Unsere Mission ist es, Menschen im Alltag zu begleiten – mit Herz, Respekt und Zuverlässigkeit. Wir möchten, dass Sie oder Ihre Angehörigen sich sicher, wertgeschätzt und gut betreut fühlen. Denn gute Alltagshilfe bedeutet mehr als Unterstützung: Sie schenkt Lebensqualität, Selbstständigkeit und Vertrauen.",
+    text: "Unsere Mission ist es, Menschen im Alltag zu begleiten — mit Herz, Respekt und Zuverlässigkeit. Wir möchten, dass Sie oder Ihre Angehörigen sich sicher, wertgeschätzt und nie allein fühlen. Denn gute Alltagshilfe bedeutet mehr als Unterstützung: Sie schenkt Lebensqualität, Gemeinschaft und Vertrauen.",
   },
   highlights: {
     title: "Was uns auszeichnet",
@@ -31,7 +31,7 @@ export const missionContent = {
   },
   forWhom: {
     title: "Für wen wir da sind",
-    text: "Wir sind für Senioren und Seniorinnen, alleinlebende Personen, Menschen mit eingeschränkter Mobilität, Familien mit Unterstützungsbedarf sowie Personen nach Krankheit oder Krankenhausaufenthalt. Auch Angehörige, die Entlastung suchen, sind bei uns herzlich willkommen.",
+    text: "Wir sind für Senior:innen, alleinlebende Personen, Menschen mit eingeschränkter Mobilität, Familien mit Unterstützungsbedarf sowie Personen nach Krankheit oder Krankenhausaufenthalt. Auch Angehörige, die Entlastung suchen, sind bei uns herzlich willkommen.",
   },
 };
 

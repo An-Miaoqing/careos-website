@@ -35,7 +35,7 @@ export default function ImpressumPage() {
                     <span className="font-semibold text-gray-900">E-Mail:</span> gutbegleitetwien@gmail.com
                   </p>
                   <p>
-                    <span className="font-semibold text-gray-900">Vertretungsberechtigte Person:</span> Günter Pytel Guo
+                    <span className="font-semibold text-gray-900">Vertretungsberechtigte Person:</span> Günter Pytel
                   </p>
                 </div>
               </div>

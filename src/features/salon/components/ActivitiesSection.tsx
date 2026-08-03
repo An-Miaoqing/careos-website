@@ -11,11 +11,11 @@ export default function ActivitiesSection() {
       <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {activities.categories.map((category) => (
           <Card key={category.id}>
-            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-orange text-white">
-              <ServiceIcon name={category.icon} className="h-6 w-6" />
+            <div className={`flex h-14 w-14 items-center justify-center rounded-full text-white ${category.colorClassName}`}>
+              <ServiceIcon name={category.icon} className="h-7 w-7" />
             </div>
-            <h3 className="mt-4 text-lg font-bold text-gray-900">{category.label}</h3>
-            <ul className="mt-3 space-y-2 text-base text-gray-700">
+            <h3 className="mt-4 text-xl font-bold text-gray-900">{category.label}</h3>
+            <ul className="mt-3 space-y-2 text-lg text-gray-700">
               {category.items.map((item) => (
                 <li key={item}>{item}</li>
               ))}

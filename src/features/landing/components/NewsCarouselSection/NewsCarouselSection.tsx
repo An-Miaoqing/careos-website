@@ -13,7 +13,7 @@ export default function NewsCarouselSection() {
           Was ist los bei Gut Begleitet?
         </h2>
         <p className="mt-3 text-lg text-gray-700">
-          Neuigkeiten, Events und Projekte — immer aktuell.
+          Neuigkeiten, Events und Projekte — immer aktuell
         </p>
       </Container>
 

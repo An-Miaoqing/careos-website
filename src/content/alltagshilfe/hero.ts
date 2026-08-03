@@ -1,7 +1,7 @@
 export const hero = {
   eyebrow: "Alltagshilfe",
   title: "Alltagshilfe & Begleitung",
-  subheadline: "Persönliche Unterstützung für mehr Lebensqualität und Selbstständigkeit.",
+  subheadline: "Persönliche Unterstützung für mehr Lebensqualität und Selbstständigkeit",
   backgroundImage: "/01alltagshilfe.jpeg",
   backgroundAlt: "Betreuerin unterstützt eine Seniorin im Alltag",
   backgroundPositionClassName: "object-[center_20%]",

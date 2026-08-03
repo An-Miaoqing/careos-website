@@ -13,7 +13,7 @@ export const team = {
   members: [
     {
       id: "guenter",
-      name: "Günter Pytel Guo",
+      name: "Günter Pytel",
       role: "Gründer & Obmann — Gut Begleitet",
       bio: "Günter gründete Gut Begleitet aus dem Wunsch heraus, älteren Menschen nicht nur Hilfe, sondern echte Begleitung und Gemeinschaft zu geben. Mit jahrzehntelanger internationaler Management-Erfahrung baut er heute ein einzigartiges soziales Ökosystem in Wien auf.",
     },
@@ -25,7 +25,7 @@ export const team = {
     },
     {
       id: "inna",
-      name: "Inna Yuzef",
+      name: "Inna Yuzefovych",
       role: "Stellvertretende Obfrau — Managerin Alltagshilfe",
       bio: "Inna leitet das operative Geschäft der Alltagshilfe. Sie koordiniert das Helfer:innen-Team, begleitet neue Kund:innen beim Erstgespräch und sorgt dafür, dass jede Begleitung persönlich und professionell ist.",
     },

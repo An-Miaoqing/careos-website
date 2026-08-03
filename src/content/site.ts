@@ -1,8 +1,8 @@
 export const site = {
   name: "Gut begleitet",
-  tagline: "Alltagshilfe für Senioren",
+  tagline: "Alltagshilfe für Senior:innen",
   description:
-    "Alltagshilfe und Begleitung für Senioren in Wien – verlässliche Unterstützung mit Herz, Respekt und persönlicher Betreuung.",
+    "Alltagshilfe und Begleitung für Senior:innen in Wien – verlässliche Unterstützung mit Herz, Respekt und persönlicher Betreuung.",
 };
 
 export const contact = {
