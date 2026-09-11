@@ -2,7 +2,6 @@ import Seo from "../../../shared/components/Seo/Seo";
 import Hero from "../../../shared/components/Hero/Hero";
 import CTABanner from "../../../shared/components/CTABanner/CTABanner";
 import IntroductionSection from "../components/IntroductionSection";
-import WhatIsSalonClubSection from "../components/WhatIsSalonClubSection";
 import ActivitiesSection from "../components/ActivitiesSection";
 import WeeklyScheduleSection from "../components/WeeklyScheduleSection";
 import GallerySection from "../components/GallerySection";
@@ -17,8 +16,8 @@ export default function SalonPage() {
   return (
     <>
       <Seo
-        title="Der Gut Begleitet Salon | Gut Begleitet"
-        description="Der Gut Begleitet Salon in Wien: Gemeinschaft, Kultur und Aktivitäten für Senioren und Angehörige. Kaffee, Workshops, Events und mehr im Kepinski Studio."
+        title="Der Companion Salon | Companion"
+        description="Der Companion Salon in Wien: Gemeinschaft, Kultur und Aktivitäten für Senior:innen und Angehörige. Kaffee, Workshops, Events und mehr im Kepinski Studio."
         canonicalUrl="https://gutbegleitet.org/salon"
         ogImage="https://gutbegleitet.org/salon-activity-1.png"
       />
@@ -34,7 +33,6 @@ export default function SalonPage() {
       />
 
       <IntroductionSection />
-      <WhatIsSalonClubSection />
       <ActivitiesSection />
       <WeeklyScheduleSection />
       <GallerySection />

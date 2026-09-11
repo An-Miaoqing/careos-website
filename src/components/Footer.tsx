@@ -143,7 +143,7 @@ export default function Footer() {
           </div>
           <div className="mt-4 space-y-1 text-base text-white/50">
             <p>
-              &copy; {new Date().getFullYear()} Gut begleitet · Vereinsregister-Nr. {zvrNumber}
+              &copy; {new Date().getFullYear()} Companion · Vereinsregister-Nr. {zvrNumber}
             </p>
           </div>
         </div>

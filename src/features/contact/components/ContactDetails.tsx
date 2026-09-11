@@ -68,7 +68,7 @@ export function MapPlaceholder() {
     <div
       className="flex h-72 items-center justify-center rounded-3xl border-2 border-dashed border-grey-light bg-beige-dark sm:h-96"
       role="img"
-      aria-label="Karte: Standort Gut begleitet in Wien"
+      aria-label="Karte: Standort Companion in Wien"
     >
       <div className="text-center px-6">
         <svg className="mx-auto h-12 w-12 text-teal" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" aria-hidden="true">

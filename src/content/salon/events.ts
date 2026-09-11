@@ -5,6 +5,7 @@ export type SalonEvent = {
   title: string;
   description: string;
   price: string;
+  categoryId: string;
 };
 
 export const location = "Salon · Skodagasse 25, 1080 Wien";
@@ -22,6 +23,7 @@ export const events = {
       title: "Kaffee & Plaudern",
       description: "Offenes Café-Treffen, keine Anmeldung nötig.",
       price: "€ 3",
+      categoryId: "coffee",
     },
     {
       id: "2",
@@ -30,6 +32,7 @@ export const events = {
       title: "Bingo-Nachmittag",
       description: "Kleine Preise, Kaffee inklusive.",
       price: "€ 3",
+      categoryId: "games",
     },
     {
       id: "3",
@@ -38,6 +41,7 @@ export const events = {
       title: "Gesundheitsvortrag",
       description: "Sturzprävention im Alltag.",
       price: "€ 5",
+      categoryId: "culture",
     },
     {
       id: "4",
@@ -46,6 +50,7 @@ export const events = {
       title: "Kreativ-Workshop",
       description: "Aquarell für Anfänger:innen.",
       price: "€ 5",
+      categoryId: "workshops",
     },
     {
       id: "5",
@@ -54,6 +59,7 @@ export const events = {
       title: "Kaffee & Plaudern",
       description: "Offenes Café-Treffen.",
       price: "€ 3",
+      categoryId: "coffee",
     },
     {
       id: "6",
@@ -62,6 +68,7 @@ export const events = {
       title: "Musikabend",
       description: "Wiener Lieder & Klaviermusik.",
       price: "€ 5",
+      categoryId: "culture",
     },
     {
       id: "7",
@@ -70,14 +77,16 @@ export const events = {
       title: "Bingo-Nachmittag",
       description: "Wöchentlicher Spielenachmittag.",
       price: "€ 3",
+      categoryId: "games",
     },
     {
       id: "8",
       date: "Do 15. Oktober 2026",
       time: "14:00",
-      title: "Yoga für Senioren",
+      title: "Yoga für Senior:innen",
       description: "Sanfte Bewegung & Entspannung.",
       price: "€ 5",
+      categoryId: "exercise",
     },
     {
       id: "9",
@@ -86,6 +95,7 @@ export const events = {
       title: "Tanzabend",
       description: "Wiener Walzer & geselliger Tanz.",
       price: "€ 5",
+      categoryId: "exercise",
     },
     {
       id: "10",
@@ -94,6 +104,7 @@ export const events = {
       title: "Kaffee & Plaudern",
       description: "Offenes Café-Treffen.",
       price: "€ 3",
+      categoryId: "coffee",
     },
     {
       id: "11",
@@ -102,6 +113,7 @@ export const events = {
       title: "Koch-Workshop",
       description: "Hausgemachte Mehlspeisen.",
       price: "€ 5",
+      categoryId: "workshops",
     },
     {
       id: "12",
@@ -110,6 +122,7 @@ export const events = {
       title: "Lesung & Gespräch",
       description: "Literatur aus Wien — mit Diskussion.",
       price: "€ 5",
+      categoryId: "culture",
     },
     {
       id: "13",
@@ -118,6 +131,7 @@ export const events = {
       title: "Herbstfest",
       description: "Saisonfest mit Musik & Buffet.",
       price: "€ 8",
+      categoryId: "celebrations",
     },
     {
       id: "14",
@@ -126,6 +140,7 @@ export const events = {
       title: "Bingo-Nachmittag",
       description: "Wöchentlicher Spielenachmittag.",
       price: "€ 3",
+      categoryId: "games",
     },
     {
       id: "15",
@@ -134,6 +149,7 @@ export const events = {
       title: "Computerkurs",
       description: "Smartphone & WhatsApp Basics.",
       price: "€ 5",
+      categoryId: "workshops",
     },
   ] satisfies SalonEvent[],
 };

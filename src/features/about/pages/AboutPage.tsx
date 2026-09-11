@@ -32,7 +32,7 @@ export default function AboutPage() {
             <div className="overflow-hidden rounded-3xl shadow-lg">
               <img
                 src="/team.jpg"
-                alt="Das Gut Begleitet Team gemeinsam bei einem Treffen"
+                alt="Das Companion Team gemeinsam bei einem Treffen"
                 className="aspect-[4/3] w-full object-cover"
                 width={800}
                 height={600}

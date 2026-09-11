@@ -1,6 +1,6 @@
 export const pricing = {
   label: "Preise",
-  title: "Transparent, fair und ohne versteckte Kosten.",
+  title: "Transparent, fair und ohne versteckte Kosten",
   hourlyRate: "25 € / Stunde",
   bullets: [
     "Persönliche Betreuung in Wien",

@@ -19,6 +19,7 @@ export type EventCarouselCard = {
   ctaLabel: string;
   href: string;
   completed?: boolean;
+  categoryId: string;
 };
 
 export type ProjectCarouselCard = {
@@ -52,7 +53,7 @@ export const carouselCards: CarouselCardData[] = [
     id: "news-1",
     date: "07. Juli 2026",
     title: "Herzlich Willkommen, Elisabeth W. — unsere neue Koordinatorin",
-    text: "Mit Elisabeth Wallner stärkt Gut Begleitet das Alltagshilfe-Team. Sie koordiniert Einsätze und ist Ihre erste Ansprechperson.",
+    text: "Mit Elisabeth Wallner stärkt Companion das Alltagshilfe-Team. Sie koordiniert Einsätze und ist Ihre erste Ansprechperson.",
     ctaLabel: "Mehr lesen →",
     href: "/news",
   },
@@ -60,7 +61,7 @@ export const carouselCards: CarouselCardData[] = [
     type: "news",
     id: "news-2",
     date: "01. Oktober 2026",
-    title: "Gut Begleitet startet Kooperation mit Hochschule Campus Wien",
+    title: "Companion startet Kooperation mit Hochschule Campus Wien",
     text: "Sozialpädagogik-Studierende unterstützen uns als Freiwillige bei Events und Begleitdiensten.",
     ctaLabel: "Mehr lesen →",
     href: "/news",
@@ -75,6 +76,7 @@ export const carouselCards: CarouselCardData[] = [
     price: "€ 5",
     ctaLabel: "Jetzt anmelden →",
     href: "/kontakt",
+    categoryId: "exercise",
   },
   {
     type: "event",
@@ -86,6 +88,7 @@ export const carouselCards: CarouselCardData[] = [
     price: "€ 5",
     ctaLabel: "Jetzt anmelden →",
     href: "/kontakt",
+    categoryId: "culture",
   },
   {
     type: "event",
@@ -97,12 +100,13 @@ export const carouselCards: CarouselCardData[] = [
     price: "€ 8",
     ctaLabel: "Jetzt anmelden →",
     href: "/kontakt",
+    categoryId: "celebrations",
   },
   {
     type: "project",
     id: "project-1",
     status: "IN ENTWICKLUNG",
-    title: "Gut Begleitet Friend — Der KI-Begleiter für zu Hause",
+    title: "Companion Friend — Der KI-Begleiter für zu Hause",
     text: "Unser smarter Tischbegleiter befindet sich in der Entwicklungsphase. Tragen Sie sich auf unsere Warteliste ein und erfahren Sie als Erste:r, wann er startet.",
     ctaLabel: "Warteliste eintragen →",
     href: "/friend",
@@ -111,7 +115,7 @@ export const carouselCards: CarouselCardData[] = [
     type: "project",
     id: "project-2",
     status: "PILOTPHASE",
-    title: "Gut Begleitet Expertennetzwerk Wien",
+    title: "Companion Expertennetzwerk Wien",
     text: "Wir bauen ein Netzwerk aus Ärzten, Beratern und Fachleuten auf, die unsere Mitglieder direkt unterstützen können.",
     ctaLabel: "Mehr erfahren →",
     href: "/kontakt",
@@ -144,12 +148,13 @@ export const carouselCards: CarouselCardData[] = [
     price: "€ 3",
     ctaLabel: "Jetzt anmelden →",
     href: "/kontakt",
+    categoryId: "games",
   },
   {
     type: "news",
     id: "news-4",
     date: "Oktober 2026",
-    title: "Gut Begleitet in den Medien: ORF Wien-Bericht",
+    title: "Companion in den Medien: ORF Wien-Bericht",
     text: "Der ORF hat über unsere Arbeit berichtet — ein schöner Moment für unser gesamtes Team.",
     ctaLabel: "Artikel lesen →",
     href: "/news",
@@ -164,12 +169,13 @@ export const carouselCards: CarouselCardData[] = [
     price: "€ 5",
     ctaLabel: "Jetzt anmelden →",
     href: "/kontakt",
+    categoryId: "workshops",
   },
   {
     type: "project",
     id: "project-4",
     status: "KOOPERATION GESUCHT",
-    title: "Gut Begleitet Gesundheitsnetzwerk — Kooperation gesucht",
+    title: "Companion Gesundheitsnetzwerk — Kooperation gesucht",
     text: "Wir suchen Partner:innen aus dem Gesundheitsbereich, um unser Netzwerk für Mitglieder weiter auszubauen.",
     ctaLabel: "Mehr erfahren →",
     href: "/kontakt",
@@ -179,7 +185,7 @@ export const carouselCards: CarouselCardData[] = [
     id: "news-5",
     date: "Oktober 2026",
     title: "Freiwillige gesucht — Helfen Sie mit!",
-    text: "Sie möchten Senioren im Alltag unterstützen und dabei etwas Sinnvolles tun? Wir freuen uns auf Ihre Nachricht.",
+    text: "Sie möchten Senior:innen im Alltag unterstützen und dabei etwas Sinnvolles tun? Wir freuen uns auf Ihre Nachricht.",
     ctaLabel: "Jetzt melden →",
     href: "/kontakt",
   },
@@ -193,6 +199,7 @@ export const carouselCards: CarouselCardData[] = [
     price: "€ 5",
     ctaLabel: "Jetzt anmelden →",
     href: "/kontakt",
+    categoryId: "workshops",
   },
   {
     type: "more",

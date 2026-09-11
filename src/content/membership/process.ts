@@ -20,7 +20,7 @@ export const process = {
     {
       number: "4",
       title: "Teilnahme",
-      description: "Sie werden Teil von Gut Begleitet — auf die Art, die zu Ihnen passt.",
+      description: "Sie werden Teil von Companion — auf die Art, die zu Ihnen passt.",
     },
   ],
 };

@@ -13,7 +13,7 @@ export default function ServicesSection() {
       <SectionTitle
         eyebrow="Leistungen"
         title="Was wir für Sie tun"
-        description="Ein Überblick über alle Bereiche, in denen wir Sie unterstützen."
+        description="Ein Überblick über alle Bereiche, in denen wir Sie unterstützen"
       />
 
       <div className="mt-10 grid gap-6 sm:grid-cols-2">

@@ -8,7 +8,7 @@ export type PrivacyPoint = {
 export const privacy = {
   label: "Privatsphäre & Sicherheit",
   title: "Ihre Daten gehören Ihnen",
-  description: "Vertrauen ist die Grundlage von Gut Begleitet Friend. Deshalb ist Datenschutz von Anfang an Teil des Designs — nicht nachträglich hinzugefügt.",
+  description: "Vertrauen ist die Grundlage von Companion Friend. Deshalb ist Datenschutz von Anfang an Teil des Designs — nicht nachträglich hinzugefügt.",
   points: [
     {
       id: "gdpr",

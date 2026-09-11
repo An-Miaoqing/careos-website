@@ -15,8 +15,8 @@ export default function MembershipPage() {
   return (
     <>
       <Seo
-        title="Mitglied werden | Gut Begleitet"
-        description="Werden Sie Teil von Gut Begleitet — als Club-Mitglied, Familie, Freiwillige:r oder Partnerorganisation. Registrieren Sie unverbindlich Ihr Interesse."
+        title="Mitglied werden | Companion"
+        description="Werden Sie Teil von Companion — als Club-Mitglied, Familie, Freiwillige:r oder Partnerorganisation. Registrieren Sie unverbindlich Ihr Interesse."
         canonicalUrl="https://gutbegleitet.org/mitgliedschaft"
         ogImage="https://gutbegleitet.org/home-page-2.jpeg"
       />
