@@ -16,8 +16,8 @@ export default function SalonPage() {
   return (
     <>
       <Seo
-        title="Der Gut Begleitet Salon | Gut Begleitet"
-        description="Der Gut Begleitet Salon in Wien: Gemeinschaft, Kultur und Aktivitäten für Senior:innen und Angehörige. Kaffee, Workshops, Events und mehr im Kepinski Studio."
+        title="Der Companion Salon | Companion"
+        description="Der Companion Salon in Wien: Gemeinschaft, Kultur und Aktivitäten für Senior:innen und Angehörige. Kaffee, Workshops, Events und mehr im Kepinski Studio."
         canonicalUrl="https://gutbegleitet.org/salon"
         ogImage="https://gutbegleitet.org/salon-activity-1.png"
       />

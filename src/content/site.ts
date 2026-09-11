@@ -1,5 +1,5 @@
 export const site = {
-  name: "Gut begleitet",
+  name: "Companion",
   tagline: "Alltagshilfe für Senior:innen",
   description:
     "Alltagshilfe und Begleitung für Senior:innen in Wien – verlässliche Unterstützung mit Herz, Respekt und persönlicher Betreuung.",
@@ -34,12 +34,12 @@ export const legalLinks = [
   { label: "Datenschutz", href: "/datenschutz" },
 ];
 
-export const footerTagline = "Gemeinsam aktiv. Gemeinsam Gut Begleitet.";
+export const footerTagline = "Gemeinsam aktiv. Gemeinsam Companion.";
 
 export const footerServices = [
   { label: "Alltagshilfe", href: "/alltagshilfe" },
   { label: "Salon & Club", href: "/salon" },
-  { label: "Gut Begleitet Friend", href: "/friend" },
+  { label: "Companion Friend", href: "/friend" },
   { label: "Mitglied werden", href: "/mitgliedschaft" },
 ];
 

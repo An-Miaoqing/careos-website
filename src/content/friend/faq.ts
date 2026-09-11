@@ -12,7 +12,7 @@ export const faq = {
       id: "medical",
       question: "Ersetzt Friend professionelle Pflege?",
       answer:
-        "Nein. Gut Begleitet Friend ist ein Begleiter für Gespräche, Erinnerungen und Kontakt zur Familie — keine medizinische Pflege und kein Ersatz dafür. Allgemeine Wohlfühl-Hinweise sind nicht-medizinischer Natur.",
+        "Nein. Companion Friend ist ein Begleiter für Gespräche, Erinnerungen und Kontakt zur Familie — keine medizinische Pflege und kein Ersatz dafür. Allgemeine Wohlfühl-Hinweise sind nicht-medizinischer Natur.",
     },
     {
       id: "listening",

@@ -22,7 +22,7 @@ const relatedServices = [
   {
     id: "friend",
     icon: "robot",
-    title: "Gut Begleitet Friend",
+    title: "Companion Friend",
     description: "Ihr digitaler Begleiter für zu Hause — bald verfügbar.",
     href: "/friend",
   },

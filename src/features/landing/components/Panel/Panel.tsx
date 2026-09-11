@@ -1,5 +1,4 @@
 import type { FocusEvent } from "react";
-import { ServiceIcon } from "../../../../shared/components/icons";
 import PanelContent from "../PanelContent/PanelContent";
 import type { LandingPanel } from "../../../../content/landing/panels";
 
@@ -47,13 +46,14 @@ export default function Panel({ panel, isActive, isAnyActive, onActivate, onDeac
 
       <div className="relative">
         <p className="text-sm font-bold text-white/60">{panel.number}</p>
-        <div className="mt-3 flex h-14 w-14 items-center justify-center rounded-full bg-white/15">
-          <ServiceIcon name={panel.icon} className="h-7 w-7" />
-        </div>
-        <p className="mt-4 text-sm font-bold uppercase tracking-wider text-white/80">{panel.label}</p>
-        <h3 className="mt-2 max-w-[220px] text-2xl font-extrabold leading-snug sm:max-w-[240px] sm:text-3xl">
-          {panel.headline}
+        <h3 className="mt-3 text-2xl font-extrabold uppercase leading-tight tracking-wide text-white sm:text-3xl lg:text-4xl">
+          {panel.label}
         </h3>
+        {panel.headline && (
+          <p className="mt-3 max-w-[220px] text-2xl font-extrabold leading-snug sm:max-w-[240px] sm:text-3xl">
+            {panel.headline}
+          </p>
+        )}
 
         <PanelContent panel={panel} isActive={contentVisible} />
       </div>

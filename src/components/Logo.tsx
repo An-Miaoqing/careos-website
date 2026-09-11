@@ -8,7 +8,7 @@ export default function Logo({ className = "", showText = true }: LogoProps) {
     <div className={`flex items-center gap-3 ${className}`}>
       <img
         src="/logo.png"
-        alt="Gut begleitet Logo"
+        alt="Companion Logo"
         className="h-14 w-14 shrink-0 object-contain sm:h-16 sm:w-16"
         width={64}
         height={64}
@@ -16,8 +16,7 @@ export default function Logo({ className = "", showText = true }: LogoProps) {
       {showText && (
         <div className="min-w-0 hidden sm:block">
           <p className="text-xl font-extrabold leading-tight sm:text-2xl">
-            <span className="text-orange">Gut </span>
-            <span className="text-teal">begleitet</span>
+            <span className="text-teal">Companion</span>
           </p>
           <p className="text-xs font-semibold text-teal sm:text-sm">Alltagshilfe für Senior:innen</p>
         </div>

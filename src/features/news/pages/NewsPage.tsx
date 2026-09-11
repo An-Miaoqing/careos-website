@@ -15,12 +15,12 @@ export default function NewsPage() {
       <Hero
         eyebrow="News & Events"
         title="Neuigkeiten & Veranstaltungen"
-        description="Alles Aktuelle von Gut Begleitet — Neuigkeiten, Veranstaltungen und Projekte auf einen Blick"
+        description="Alles Aktuelle von Companion — Neuigkeiten, Veranstaltungen und Projekte auf einen Blick"
       />
 
       <TeaserBanner
         label="Bald verfügbar"
-        title="Gut Begleitet Friend — KI-Begleiter kommt bald"
+        title="Companion Friend — KI-Begleiter kommt bald"
         description="Unser smarter Tischbegleiter befindet sich in der Entwicklung. Tragen Sie sich auf die Warteliste ein."
         ctaLabel="Mehr erfahren"
         ctaHref="/friend"
@@ -37,7 +37,7 @@ export default function NewsPage() {
 
       <ComingSoon
         title="Social Media & weitere Formate"
-        description="Schon bald finden Sie hier auch Beiträge aus sozialen Netzwerken und weitere Ankündigungen rund um Gut Begleitet"
+        description="Schon bald finden Sie hier auch Beiträge aus sozialen Netzwerken und weitere Ankündigungen rund um Companion"
       />
 
       <CTABanner />

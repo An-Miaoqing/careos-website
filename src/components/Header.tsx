@@ -40,7 +40,7 @@ export default function Header() {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
-        <Link to="/" className="shrink-0 rounded-lg" aria-label="Gut begleitet – Startseite">
+        <Link to="/" className="shrink-0 rounded-lg" aria-label="Companion – Startseite">
           <Logo />
         </Link>
 

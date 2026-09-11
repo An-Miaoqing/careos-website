@@ -1,8 +1,8 @@
 export const missionContent = {
   welcome: {
-    title: "Herzlich willkommen bei Gut Begleitet",
+    title: "Herzlich willkommen bei Companion",
     intro:
-      "Gut Begleitet ist Ihr verlässlicher Partner für Alltagshilfe und Begleitung in Wien. Wir sind da, wenn Unterstützung im Alltag gebraucht wird — und wenn jemand fehlt, der einfach da ist. Für Angehörige bedeutet das: eine vertrauensvolle Hilfe, auf die sie sich verlassen können.",
+      "Companion ist Ihr verlässlicher Partner für Alltagshilfe und Begleitung in Wien. Wir sind da, wenn Unterstützung im Alltag gebraucht wird — und wenn jemand fehlt, der einfach da ist. Für Angehörige bedeutet das: eine vertrauensvolle Hilfe, auf die sie sich verlassen können.",
   },
   mission: {
     title: "Unsere Mission",
@@ -49,7 +49,7 @@ export const testimonials = {
     {
       id: "thomas",
       quote:
-        "Ingrid kommt zweimal pro Woche zu meiner Mutter. Seitdem ist sie viel ausgeglichener — und wir als Familie können endlich wieder durchatmen. Gut Begleitet ist genau das, was wir gesucht haben.",
+        "Ingrid kommt zweimal pro Woche zu meiner Mutter. Seitdem ist sie viel ausgeglichener — und wir als Familie können endlich wieder durchatmen. Companion ist genau das, was wir gesucht haben.",
       name: "Thomas R.",
       relation: "Sohn einer Kundin · Wien",
     },

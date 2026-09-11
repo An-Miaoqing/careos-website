@@ -8,7 +8,7 @@ export type ComparisonItem = {
 export const comparison = {
   label: "Vergleich",
   title: "Was Friend anders macht",
-  description: "Gut Begleitet Friend ist bewusst kein weiteres Gadget — sondern von Grund auf für ältere Menschen und ihre Familien gedacht.",
+  description: "Companion Friend ist bewusst kein weiteres Gadget — sondern von Grund auf für ältere Menschen und ihre Familien gedacht.",
   items: [
     {
       id: "speakers",

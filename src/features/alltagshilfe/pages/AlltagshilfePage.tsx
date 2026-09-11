@@ -14,7 +14,7 @@ export default function AlltagshilfePage() {
   return (
     <>
       <Seo
-        title="Alltagshilfe & Begleitung in Wien | Gut Begleitet"
+        title="Alltagshilfe & Begleitung in Wien | Companion"
         description="Alltagshilfe in Wien: Haushalt, Einkauf, Arztbegleitung, Gesellschaft und mehr. Persönlich, verlässlich, flexibel buchbar. Jetzt Beratung anfragen."
         canonicalUrl="https://gutbegleitet.org/alltagshilfe"
         ogImage="https://gutbegleitet.org/gut-begleitet-hero.jpeg"

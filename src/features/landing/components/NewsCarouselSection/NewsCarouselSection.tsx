@@ -10,7 +10,7 @@ export default function NewsCarouselSection() {
       <Container className="text-center">
         <Badge variant="eyebrow">Aktuelles & Gemeinschaft</Badge>
         <h2 className="mt-2 text-3xl font-extrabold text-teal sm:text-4xl">
-          Was ist los bei Gut Begleitet?
+          Was ist los bei Companion?
         </h2>
         <p className="mt-3 text-lg text-gray-700">
           Neuigkeiten, Events und Projekte — immer aktuell

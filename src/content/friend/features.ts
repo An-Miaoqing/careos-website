@@ -7,7 +7,7 @@ export type FriendFeature = {
 
 export const features = {
   label: "Funktionen",
-  title: "Was Gut Begleitet Friend kann",
+  title: "Was Companion Friend kann",
   items: [
     {
       id: "conversation",

@@ -13,7 +13,7 @@ export const trust = {
   intro:
     "Alle unsere Helfer:innen werden persönlich ausgewählt, geprüft und begleitet. Sie bringen nicht nur Erfahrung mit – sondern echte Menschlichkeit.",
   association: {
-    name: "Gut begleitet – Verein für Alltagshilfe für Senioren",
+    name: "Companion – Verein für Alltagshilfe für Senioren",
     zvrNumber: "1429148037",
     founded: "Gegründet 2025",
   },

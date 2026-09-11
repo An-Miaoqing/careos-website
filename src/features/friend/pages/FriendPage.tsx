@@ -17,8 +17,8 @@ export default function FriendPage() {
   return (
     <>
       <Seo
-        title="Gut Begleitet Friend | Gut Begleitet"
-        description="Gut Begleitet Friend ist ein ruhiger, digitaler Begleiter für zu Hause — Gespräche, Erinnerungen und Verbindung zur Familie, ohne komplizierte Technik."
+        title="Companion Friend | Companion"
+        description="Companion Friend ist ein ruhiger, digitaler Begleiter für zu Hause — Gespräche, Erinnerungen und Verbindung zur Familie, ohne komplizierte Technik."
         canonicalUrl="https://gutbegleitet.org/friend"
         ogImage="https://gutbegleitet.org/gut-friend-1.png"
       />

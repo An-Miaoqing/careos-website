@@ -1,9 +1,9 @@
 export const hero = {
-  eyebrow: "Gut Begleitet Friend",
-  title: "Gut Begleitet Friend",
+  eyebrow: "Companion Friend",
+  title: "Companion Friend",
   subheadline: "Ihr digitaler Begleiter für zu Hause. Einfach per Tastendruck. Ohne komplizierte Technik.",
   backgroundImage: "/gut-friend-1.png",
-  backgroundAlt: "Gut Begleitet Friend – Ihr digitaler Begleiter für zu Hause",
+  backgroundAlt: "Companion Friend – Ihr digitaler Begleiter für zu Hause",
   primaryCta: { label: "Interesse anmelden", href: "/kontakt" },
   secondaryCta: { label: "Häufige Fragen", href: "#faq" },
 };
