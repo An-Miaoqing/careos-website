@@ -217,7 +217,17 @@ export default function BookingPage() {
       <Hero
         eyebrow="Termin buchen"
         title="Termin Buchen"
-        description="Planen Sie Ihren Termin bequem online – persönlich, verständlich und ohne Stress."
+        description={
+          <div className="space-y-3">
+            <p>
+              Buchen Sie Ihren Termin bequem online über das Formular oder vereinbaren Sie ihn telefonisch unter:
+            </p>
+            <a href="tel:+4368110194236" className="inline-block font-extrabold text-orange hover:text-orange-dark">
+              +43 681 1019 4236
+            </a>
+            <p>Wählen Sie einfach die Möglichkeit, die für Sie am besten passt.</p>
+          </div>
+        }
       />
 
       <section className="py-16 sm:py-20">

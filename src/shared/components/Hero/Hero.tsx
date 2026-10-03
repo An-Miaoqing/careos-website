@@ -1,4 +1,5 @@
 import Button from "../Button/Button";
+import type { ReactNode } from "react";
 
 type HeroCta = {
   label: string;
@@ -7,7 +8,7 @@ type HeroCta = {
 
 type HeroProps = {
   title: string;
-  description?: string;
+  description?: ReactNode;
   eyebrow?: string;
   backgroundImage?: string;
   backgroundAlt?: string;
@@ -66,7 +67,7 @@ export default function Hero({
             )}
             <h1 className="mt-2 text-3xl font-extrabold text-white sm:text-4xl lg:text-5xl">{title}</h1>
             {description && (
-              <p className="mt-5 text-xl leading-relaxed text-white/90">{description}</p>
+              <div className="mt-5 text-xl leading-relaxed text-white/90">{description}</div>
             )}
             <HeroCtas primaryCta={primaryCta} secondaryCta={secondaryCta} />
           </div>
@@ -84,7 +85,7 @@ export default function Hero({
           )}
           <h1 className="mt-2 text-3xl font-extrabold text-teal sm:text-4xl lg:text-5xl">{title}</h1>
           {description && (
-            <p className="mt-5 text-xl leading-relaxed text-gray-700">{description}</p>
+            <div className="mt-5 text-xl leading-relaxed text-gray-700">{description}</div>
           )}
           <HeroCtas primaryCta={primaryCta} secondaryCta={secondaryCta} />
         </div>

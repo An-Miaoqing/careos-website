@@ -33,8 +33,8 @@ export default function SalonPage() {
       />
 
       <IntroductionSection />
-      <ActivitiesSection />
       <WeeklyScheduleSection />
+      <ActivitiesSection />
       <GallerySection />
       <VenueSection />
       <TeamSection />
