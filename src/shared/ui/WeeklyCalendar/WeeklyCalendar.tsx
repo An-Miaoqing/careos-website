@@ -148,7 +148,7 @@ export default function WeeklyCalendar({
           {week.days.map((dayEntry) => (
             <div
               key={dayEntry.day}
-              className={`rounded-2xl border p-3 ${
+              className={`min-w-0 rounded-2xl border p-3 ${
                 dayEntry.events.length > 0 ? "border-teal/20 bg-white" : "border-grey-light bg-white/60"
               }`}
             >
@@ -165,16 +165,18 @@ export default function WeeklyCalendar({
                         type="button"
                         aria-pressed={isSelected}
                         onClick={() => setSelectedEvent({ ...event, day: dayEntry.day, date: dayEntry.date })}
-                        className={`w-full rounded-lg px-2 py-2 text-left transition-colors ${
+                        className={`w-full min-w-0 overflow-hidden rounded-lg px-2 py-2 text-left transition-colors ${
                           isSelected ? "bg-teal-light" : "hover:bg-teal-light/50"
                         }`}
                       >
-                        <div className="flex items-center gap-2">
+                        <div className="flex min-w-0 items-center gap-2">
                           <span
                             className={`h-2.5 w-2.5 shrink-0 rounded-full ${categoryColors[event.categoryId] ?? "bg-teal"}`}
                             aria-hidden="true"
                           />
-                          <p className="text-base font-bold text-gray-900">{event.title}</p>
+                          <p className="min-w-0 flex-1 truncate text-base font-bold text-gray-900" title={event.title}>
+                            {event.title}
+                          </p>
                         </div>
                         <p className="mt-0.5 text-sm text-grey-soft">{event.time} Uhr</p>
                       </button>
@@ -232,7 +234,9 @@ export default function WeeklyCalendar({
                                 aria-hidden="true"
                               />
                               <span className="hidden min-w-0 flex-1 sm:block">
-                                <p className="truncate text-sm font-bold leading-tight text-gray-900">{event.title}</p>
+                                <p className="truncate text-sm font-bold leading-tight text-gray-900" title={event.title}>
+                                  {event.title}
+                                </p>
                                 <p className="truncate text-xs text-grey-soft">{event.time} Uhr</p>
                               </span>
                             </div>
